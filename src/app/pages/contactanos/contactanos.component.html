@@ -1,0 +1,26 @@
+<section class="banner-contact banner">
+    <div class="contenido-banner">
+        <h1>CONTACT US</h1>
+        <p>Your next adventure starts here</p>
+    </div>
+</section>
+
+<section class="contact-container">
+  <div class="contact-image">
+    <img src="contactanos.jpg" alt="Grupo en tour">
+  </div>
+
+  <div class="contact-form-box">
+    <h2>Chat with us</h2>
+    <form (ngSubmit)="enviarFormulario()">
+      <input type="text" placeholder="Full name" [(ngModel)]="nombre" name="nombre" required>
+      <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required>
+      <input type="tel" placeholder="WhatsApp number" [(ngModel)]="telefono" name="telefono" required>
+      <textarea placeholder="What are you interested in?" [(ngModel)]="mensaje" name="mensaje" required></textarea>
+      <div class="contact-buttons">
+        <button type="button" (click)="enviarWhatsApp()">WhatsApp</button>
+        <button type="submit">Mail</button>
+      </div>
+    </form>
+  </div>
+</section>

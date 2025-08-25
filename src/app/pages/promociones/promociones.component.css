@@ -1,0 +1,213 @@
+.promo-cont {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+/* Contenedor centrado */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Sección general */
+.tour-section {
+  padding: 2rem 0;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #5a2a00;
+}
+
+.quote, .buy {
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 2px solid #10b981;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quote {
+  background: #fff;
+  color: #10b981;
+}
+
+.quote:hover {
+  background: #10b981;
+  color: white;
+}
+
+.buy {
+  background: #10b981;
+  color: white;
+}
+
+.buy:hover {
+  background: #059669;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+}
+
+.main-image {
+  grid-row: span 2;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.activity {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.activity img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.activity span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #10b981;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+
+
+
+
+.program-section {
+  padding: 2rem 0;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Flex container para columnas principales */
+.info-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* Columnas izquierda y derecha */
+.left, .right {
+  flex: 0 0 48%;
+}
+
+.left h3, .right h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+/* Estilo de listas */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+ul li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #ccc;
+  font-size: 0.8rem;
+  top: 0.2rem;
+}
+
+/* Sección ¿Qué llevar? */
+.llevar {
+  margin-top: 2rem;
+}
+
+.llevar h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.llevar-box {
+  background-color: #f3f3f3;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.llevar-box ul {
+  flex: 1;
+}
+
+.llevar-box li {
+  padding-left: 0;
+  position: relative;
+  font-size: 1rem;
+}
+
+.llevar-box li::before {
+  content: ''; /* Elimina el bullet decorativo aquí */
+}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+:root {
+  /* Tonos principales */
+  --color-primary: #002b5c;       /* Azul Marino Oscuro */
+  --color-secondary: #0077b6;     /* Azul Vibrante */
+  --color-accent: #00b4d8;        /* Celeste Técnico */
+  --color-complementary: #ff6b00; /* Naranja quemado */
+  --color-complementary-low: #F5E7DA;
+  /* Colores neutros */
+  --color-white: #ffffff;
+  --color-light: #f4f4f4;
+  --color-dark: #1c1c1c;
+  --color-gray: #e1e1e1;
+  
+  /* Énfasis / Alertas */
+  --color-success: #2ecc71;
+  --color-warning: #f1c40f;
+  --color-danger: #e74c3c;
+
+  /* Transparencias y overlays */
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+  --overlay-light: rgba(255, 255, 255, 0.3);
+}
+
+
+* {
+  box-sizing: border-box;
+
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+section.show {
+  opacity: 1;
+  transform: none;
+}
+
+.full-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.banner {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.banner-con-imagen {
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-con-imagen .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* oscurece el fondo */
+  z-index: 1;
+}
+
+.banner-con-imagen .contenido-banner {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.banner-con-imagen h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.banner-con-imagen p {
+  font-size: 1.5rem;
+}

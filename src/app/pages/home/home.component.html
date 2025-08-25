@@ -1,0 +1,78 @@
+<section class="banner banner-con-imagen">
+    <div class="overlay"></div>
+    <div class="contenido-banner">
+        <h1>BIENVENIDOS A</h1>
+        <p>Sandboard Evolution Desert</p>
+    </div>
+</section>
+
+<!-- tours-section.component.html -->
+<section class="sect-tours-section">
+  <div class="sect-text-column">
+    <h2>A DONDE QUIERAS<br /><span class="sect-highlight">como quieras</span></h2>
+    <p>
+      Explora nuestros destinos más populares con experiencias únicas y memorables. Vive aventuras inolvidables en cada rincón del Perú.
+    </p>
+  </div>
+
+  <div class="sect-cards-container">
+    <div class="sect-card" *ngFor="let tour of tours">
+      <div class="sect-card-image" [ngStyle]="{'background-image': 'url(' + tour.image + ')'}">
+        <div class="sect-card-info">
+          <!--<span class="sect-duration">{{ tour.duration }}</span>-->
+          <h3>{{ tour.title }}</h3>
+          <!--<span class="sect-price">Desde <strong>${{ tour.price }}</strong></span>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="full-screen experiencia-lima">
+  <div class="imagen-bus">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/22/71/39/1c/caption.jpg?w=500&h=400&s=1" alt="Lima Experience Bus" />
+  </div>
+
+  <div class="contenido-texto">
+    <h2>
+        TOURS EN PERU <span class="resaltado">para ti</span>
+    </h2>
+
+    <div class="item-servicio">
+      <i class="fas fa-heart"></i>
+      <div>
+        <h4>TODO LO QUE PUEDAS DESEAR</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, id quae numquam accusamus nulla aperiam. Natus officia, repellendus maxime similique, error quisquam, a minus vitae eos placeat quod ad dolorum?
+        </p>
+      </div>
+    </div>
+
+    <div class="item-servicio">
+      <i class="fas fa-handshake"></i>
+      <div>
+        <h4>TODO LO QUE PUEDAS PENSAR</h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam ducimus nemo tempore ea repellendus blanditiis quam veniam dignissimos illum sequi! Assumenda quidem, nobis voluptatibus tempora recusandae tenetur autem explicabo cupiditate.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="carousel">
+  <div class="carousel-section">
+    <div class="carousel-track" [style.transform]="getTransform()">
+      <div class="carousel-card" *ngFor="let item of carouselItems">
+        <div class="carousel-bg" [ngStyle]="{ 'background-image': 'url(' + item.img + ')' }"></div>
+        <div class="carousel-content">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.description }}</p>
+          <a [routerLink]="item.link" class="btn">Ir a {{ item.title }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
